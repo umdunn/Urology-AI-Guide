@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Library — Urology Faculty AI Guide</title>
+<style>
+  :root{--navy:#00274C;--navy2:#0a3a6b;--maize:#FFCB05;--maize-soft:#FFF1C8;--card:#F1F4F8;--ink:#1B2432;--muted:#5C697B;--teal:#0E8A7C;--line:#D8DEE6;--red:#B3261E}
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55}
+  header{background:var(--navy);color:#fff;padding:0 18px 26px;border-top:8px solid var(--maize)}
+  .wrap{max-width:820px;margin:0 auto}
+  nav{display:flex;gap:18px;padding:14px 0 0;font-size:14px}
+  nav a{color:#cfd8e3;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+  nav a.here{color:#fff;border-bottom-color:var(--maize)}
+  .brand{color:var(--maize);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:22px}
+  h1{margin:6px 0 8px;font-size:30px;line-height:1.15}
+  .lede{margin:0;color:#cfd8e3;font-size:17px}
+  main{padding:10px 18px 60px}
+  h2{font-size:21px;color:var(--navy);margin:38px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--maize)}
+  p{margin:0 0 12px}
+  .howto{background:var(--maize-soft);border-left:5px solid var(--maize);border-radius:12px;padding:14px 18px;margin:16px 0}
+  .howto code{background:#fff;padding:1px 6px;border-radius:5px}
+  .pc{background:var(--card);border-radius:12px;padding:16px 18px;margin:14px 0;position:relative}
+  .pc h3{margin:0 0 4px;font-size:17px;color:var(--navy);padding-right:90px}
+  .pc .when{margin:0 0 10px;font-size:14.5px;color:var(--muted)}
+  .pc pre{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.5;color:#1a2530}
+  .pc .ph{color:var(--navy2);font-weight:600}
+  .copy{position:absolute;top:14px;right:14px;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:7px 12px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+  .copy:hover{background:var(--navy2)}
+  .copy.done{background:var(--teal)}
+  .phi{display:inline-block;background:#FFF4F2;color:var(--red);border:1px solid #F1C9C4;border-radius:6px;padding:1px 8px;font-size:12.5px;font-weight:700;margin-left:6px;vertical-align:1px}
+  .small{font-size:14px;color:var(--muted)}
+  footer{background:var(--card);color:var(--muted);font-size:13.5px;text-align:center;padding:18px}
+  a{color:var(--navy2)}
+  @media (max-width:560px){body{font-size:16px} h1{font-size:26px} .pc h3{padding-right:0} .copy{position:static;display:inline-block;margin:0 0 10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav><a href="index.html">Getting started</a><a class="here" href="prompts.html">Prompt library</a></nav>
+    <div class="brand">Michigan Medicine &middot; Department of Urology</div>
+    <h1>Prompt Library</h1>
+    <p class="lede">Real prompts from Urology faculty, lightly generalized. Copy one, swap in your details in <span style="color:#FFCB05;font-weight:700">[brackets]</span>, and go.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="howto">
+  <strong>How to use these.</strong> Every prompt here follows the same pattern: what you want, the facts, a draft to review, and an invitation to ask questions. <strong>PHI</strong>-tagged prompts involve patient data &mdash; use them only in <strong>U-M GPT / Maizey</strong> or another Michigan Medicine&ndash;approved tool. Everything else works in any chatbot.
+</div>
+
+<!-- ============ UNIVERSAL ============ -->
+<h2>The universal closer</h2>
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Add this to the end of anything</h3>
+  <p class="when">The single most useful sentence: it makes the model surface ambiguity before doing an hour of work in the wrong direction.</p>
+<pre>Ask me any questions you have before you get started.</pre>
+</div>
+
+<!-- ============ ADMIN ============ -->
+<h2>Administrative</h2>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Dress up a plain email</h3>
+  <p class="when">The neighborhood-well email. Same words in, formatted out &mdash; five minutes.</p>
+<pre>I'm sending an email to <span class="ph">[audience]</span> about <span class="ph">[topic]</span>. I want a nicely formatted email similar to <span class="ph">[a previous email or style you like — attach or describe it]</span>. Keep my wording; add structure, a short header, and a clearly set-off box for the key dates or actions. Here is the draft:
+
+<span class="ph">[paste your plain-text draft]</span></pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Letter of recommendation in my voice</h3>
+  <p class="when">Give it two or three of your past letters so it writes like you, not like a template.</p>
+<pre>Draft a letter of recommendation for <span class="ph">[name]</span>, applying to <span class="ph">[program / position]</span>. Write in my voice — here are two letters I've written before for reference: <span class="ph">[attach or paste]</span>. Key points to include: <span class="ph">[3–5 bullets: role, accomplishments, specific anecdotes, comparison to peers]</span>. Target length one page. Make a draft for me to review, and ask me any questions you have before you start.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Turn an outline into slides</h3>
+  <p class="when">Base slides from a description, using a template you already have.</p>
+<pre>Turn this outline into a first-draft slide deck: <span class="ph">[paste outline or describe the talk, audience, and length]</span>. Use the attached template's style <span class="ph">[attach .pptx]</span>. One idea per slide, minimal text, speaker notes with the talk track for each slide. I'll edit from your draft — don't over-polish. Ask me any questions before you start.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Sell things / handle a multi-step chore end to end</h3>
+  <p class="when">The Facebook Marketplace prompt, generalized: give the list, your rules, and who decides.</p>
+<pre>I need to <span class="ph">[goal, e.g., sell these items / schedule these meetings / reconcile these records]</span>. Here are the items and details: <span class="ph">[list]</span>. My priorities: <span class="ph">[e.g., speed over price / minimize my time]</span>. You'll ask me before any final decision, but otherwise run the process. Tell me your plan before you get started, and ask me any questions you have.</pre>
+</div>
+
+<!-- ============ CLINICAL ============ -->
+<h2>Clinical <span class="phi">PHI — approved tools only</span></h2>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Patient education handout <span class="phi">PHI</span></h3>
+  <p class="when">Plain-language, reading-level controlled, in the format your clinic uses.</p>
+<pre>Write a one-page patient education handout on <span class="ph">[condition / procedure]</span> for <span class="ph">[adult / pediatric]</span> urology patients at a 6th–8th grade reading level. Cover what it is, what to expect, warning signs to call about, and when to follow up. Neutral, reassuring tone; short paragraphs and headers. Do not include any identifying patient information. Draft for my review.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Summarize outside records for a new patient <span class="phi">PHI</span></h3>
+  <p class="when">The department's #1 wished-for use. Works today in U-M GPT with pasted text or uploaded documents.</p>
+<pre>These are outside records for a new <span class="ph">[oncology / stone / etc.]</span> patient: <span class="ph">[paste or attach]</span>. Build a chronological summary: presenting problem and first diagnosis; treatments completed with dates; relevant imaging and pathology with key findings; current medications; open questions the records don't answer. Flag anything that looks inconsistent between documents. Be concise — this is my pre-visit chart prep.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Draft a reply to a patient message <span class="phi">PHI</span></h3>
+  <p class="when">You review and send; it drafts.</p>
+<pre>Draft a reply to this patient message: <span class="ph">[paste]</span>. Context: <span class="ph">[relevant plan / recent visit / result]</span>. Warm, plain language, under 120 words, no medical jargon, and end with what the patient should do next and when. I will review before sending.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Prior authorization / appeal letter</h3>
+  <p class="when">Give it the denial language and the guideline; it structures the argument.</p>
+<pre>Write a prior-authorization appeal for <span class="ph">[medication / procedure]</span>. Denial reason: <span class="ph">[paste]</span>. Clinical justification: <span class="ph">[bullets — diagnosis, failed alternatives, guideline support]</span>. Cite the relevant guideline (<span class="ph">[AUA / NCCN / etc.]</span>) accurately — if you are not certain of a citation, say so rather than inventing one. Formal tone, one page. Placeholders for patient identifiers.</pre>
+</div>
+
+<!-- ============ RESEARCH ============ -->
+<h2>Research &amp; writing</h2>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Edit my draft in my own voice</h3>
+  <p class="when">Assist-mode, which 58% of us already use: your words, tightened.</p>
+<pre>Edit this <span class="ph">[abstract / section / grant aim]</span> for clarity and concision without changing my voice or my claims. Keep my terminology. Flag any sentence where the logic is unclear rather than silently rewriting it. Show changes as a marked-up version plus a clean version. <span class="ph">[paste text]</span></pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Literature summary with verifiable sources</h3>
+  <p class="when">Built around the verification habit: sources you can actually open.</p>
+<pre>Summarize the current evidence on <span class="ph">[question]</span> for a <span class="ph">[grant background / manuscript introduction / journal club]</span>. For every claim, give the citation with DOI or PMID. Only cite papers you are confident exist; if unsure, say "verify" next to it. End with the 3 papers I should read in full and why.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Check my statistical code</h3>
+  <p class="when">Refining beats generating from scratch — you stay the analyst.</p>
+<pre>Review this <span class="ph">[R / Stata / Python]</span> code for a <span class="ph">[describe analysis, e.g., mixed-effects model of X on Y]</span>: <span class="ph">[paste]</span>. Check for errors in logic, model specification, and variable handling. Explain each issue and suggest the fix, but do not rewrite the whole script. Then list the assumptions I should verify before trusting the output.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Reformat a biosketch to a new template</h3>
+  <p class="when">The retreat build-along: current document + new rules → converted document.</p>
+<pre>Here is my current biosketch: <span class="ph">[attach]</span>. Here are the instructions for the new required format: <span class="ph">[attach or paste]</span>. Convert my biosketch to the new format. Keep every accomplishment and citation exactly as written; only restructure. Tell me anything the new format asks for that my current biosketch doesn't contain, so I can supply it.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Have Chat write the Claude Code prompt</h3>
+  <p class="when">For anything bigger than one ask. Four sentences in, five pages out.</p>
+<pre>I want Claude Code to <span class="ph">[goal — manage a project, build a tool, process a set of files]</span>, including <span class="ph">[scope]</span>. I'll be using <span class="ph">[tools / accounts / files it can access]</span>. Create the prompt I should paste into Claude Code to start this project: operating rules (ask before any consequential action), file structure, standards, and a phased plan. Ask me any questions you have before drafting the prompt.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Handoff to a new session</h3>
+  <p class="when">When a long chat has all the decisions in it and you need to move the work elsewhere.</p>
+<pre>Produce a handoff document for a new Claude Code session with all the key decisions from this project: context, the authoritative rules or formulas, data sources and their quirks, what was built, what verification we did, and what's still pending. Write it so someone with no memory of this chat could continue the work.</pre>
+</div>
+
+<!-- ============ EVERYDAY ============ -->
+<h2>Everyday</h2>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Fix a thing from a photo</h3>
+  <p class="when">Thermostat errors, dashboard lights, settings screens — take a picture and ask.</p>
+<pre><span class="ph">[attach photo]</span> I'm getting this on my <span class="ph">[device]</span>. What do I do to fix it? Give me the two or three most likely causes in order, with the exact steps for each.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Explain a concept at my level</h3>
+  <p class="when">"Predictive vs. prognostic" — say who you are, get the right depth.</p>
+<pre>Explain <span class="ph">[concept]</span> to me in the context of <span class="ph">[your field / the situation]</span>. I'm a <span class="ph">[urologist / statistician / etc.]</span> — skip the basics I'd already know and focus on where the distinction actually matters in practice. One good example.</pre>
+</div>
+
+<div class="pc">
+  <button class="copy" data-copy>Copy</button>
+  <h3>Your first thirty minutes</h3>
+  <p class="when">If you've never used one of these tools, start here.</p>
+<pre>I'm a <span class="ph">[role]</span> and I've never really used you before. Ask me five questions about my week, then suggest three specific things you could take off my plate — with the exact prompt I'd use for each.</pre>
+</div>
+
+<p class="small" style="margin-top:36px">Have a prompt that earns its keep? Send it to Rod Dunn to add here. Generalized from real faculty prompts shared at the September 2026 retreat.</p>
+
+</main>
+<footer>Department of Urology faculty retreat &middot; September 2026 &middot; <a href="index.html">Getting-started guide</a></footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var pre = btn.parentElement.querySelector('pre');
+    var text = pre.innerText;
+    function done(){ btn.textContent='Copied'; btn.classList.add('done'); setTimeout(function(){btn.textContent='Copy'; btn.classList.remove('done');},1600); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); done(); }catch(e){} document.body.removeChild(ta);
+    }
+  });
+});
+</script>
+</body>
+</html>

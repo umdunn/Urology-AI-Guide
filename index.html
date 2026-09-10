@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Started with AI — Urology Faculty Guide</title>
+<style>
+  :root{--navy:#00274C;--navy2:#0a3a6b;--maize:#FFCB05;--maize-soft:#FFF1C8;--card:#F1F4F8;--ink:#1B2432;--muted:#5C697B;--teal:#0E8A7C;--line:#D8DEE6;--red:#B3261E}
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55}
+  header{background:var(--navy);color:#fff;padding:0 18px 26px;border-top:8px solid var(--maize)}
+  .wrap{max-width:820px;margin:0 auto}
+  nav{display:flex;gap:18px;padding:14px 0 0;font-size:14px}
+  nav a{color:#cfd8e3;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+  nav a.here{color:#fff;border-bottom-color:var(--maize)}
+  .brand{color:var(--maize);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:22px}
+  h1{margin:6px 0 8px;font-size:30px;line-height:1.15}
+  .lede{margin:0;color:#cfd8e3;font-size:17px}
+  main{padding:10px 18px 60px}
+  h2{font-size:21px;color:var(--navy);margin:38px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--maize)}
+  h3{font-size:17px;color:var(--navy);margin:20px 0 6px}
+  p{margin:0 0 12px}
+  .card{background:var(--card);border-radius:12px;padding:16px 18px;margin:14px 0}
+  .card.warn{background:#FFF4F2;border-left:5px solid var(--red)}
+  .card.tip{background:var(--maize-soft);border-left:5px solid var(--maize)}
+  .card.teal{background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal)}
+  ul,ol{margin:6px 0 12px;padding-left:22px}
+  li{margin:5px 0}
+  table{width:100%;border-collapse:collapse;font-size:15.5px;margin:10px 0 16px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--card);color:var(--navy);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  code,.prompt{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14.5px}
+  .prompt{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;white-space:pre-wrap;margin:8px 0 4px;color:#1a2530}
+  .small{font-size:14px;color:var(--muted)}
+  .num{display:inline-block;background:var(--navy);color:var(--maize);font-weight:700;border-radius:6px;padding:0 8px;margin-right:8px;font-size:14px}
+  .steps li{margin:10px 0}
+  footer{background:var(--card);color:var(--muted);font-size:13.5px;text-align:center;padding:18px}
+  a{color:var(--navy2)}
+  @media (max-width:560px){body{font-size:16px} h1{font-size:26px} th,td{padding:8px 6px;font-size:14.5px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav><a class="here" href="index.html">Getting started</a><a href="prompts.html">Prompt library</a></nav>
+    <div class="brand">Michigan Medicine &middot; Department of Urology</div>
+    <h1>Getting Started with AI</h1>
+    <p class="lede">The take-home guide from the 2026 faculty retreat AI session. Ten minutes to read; the habits take a week.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="card warn">
+  <strong>The one rule before anything else.</strong> Patient information (PHI), student records, and other regulated data go <em>only</em> into Michigan Medicine&ndash;approved tools such as <strong>U-M GPT</strong> and <strong>Maizey</strong>. Consumer chatbots (ChatGPT, Claude, Gemini, Copilot personal accounts) are for everything else. When in doubt, don't paste it &mdash; ask. Current institutional guidance lives at <a href="https://genai.umich.edu" target="_blank" rel="noopener">genai.umich.edu</a>.
+</div>
+
+<h2>1. Which tool for what</h2>
+<table>
+  <tr><th>Tool</th><th>Good for</th><th>Notes</th></tr>
+  <tr><td><strong>U-M GPT / Maizey</strong><br><span class="small">umgpt.umich.edu</span></td><td>Anything touching patient or institutional data; summarizing documents you can't share externally</td><td>Approved for sensitive data. Free with your uniqname.</td></tr>
+  <tr><td><strong>ChatGPT, Claude, Gemini</strong></td><td>Writing and editing, brainstorming, explaining concepts, code, planning, everyday questions</td><td>The general workhorses. 86% of us use ChatGPT; half use Claude and Gemini too. Paid tiers add longer memory and file handling.</td></tr>
+  <tr><td><strong>OpenEvidence</strong></td><td>Point-of-care clinical questions with citations</td><td>Free for clinicians; 55% of us already use it.</td></tr>
+  <tr><td><strong>Microsoft Copilot</strong> (M365)</td><td>Inside Outlook, Word, Excel, Teams &mdash; summaries, drafts, meeting recaps</td><td>Covered by the enterprise license; data stays in the tenant.</td></tr>
+  <tr><td><strong>Claude Code / Cowork / Codex</strong></td><td>Multi-step projects: build a tool, process a folder of files, automate a workflow</td><td>Agents that <em>do</em> work rather than chat about it. Start with the Chat-writes-the-prompt trick below.</td></tr>
+  <tr><td><strong>Ambient scribes</strong> (DAX)</td><td>Drafting clinic notes from the visit conversation</td><td>Six of us use one routinely; the department is watching pre-charting and outside-records features closely.</td></tr>
+</table>
+
+<h2>2. How to ask &mdash; the whole method</h2>
+<p>Prompt engineering is over. Current models are trained past the 2023 tricks ("you are a world-class expert," "take a deep breath," "I'll tip you $200"). What works is what works with a smart new colleague:</p>
+<ol class="steps">
+  <li><span class="num">1</span><strong>Say what you want.</strong> The outcome, not the steps. "Make me a one-page summary for the chair" beats "Please write a document that…"</li>
+  <li><span class="num">2</span><strong>Give the facts.</strong> Paste the raw material &mdash; dates, names, the messy draft, the constraint that matters. It cannot read your mind, but it reads everything you give it.</li>
+  <li><span class="num">3</span><strong>Ask for a draft to review.</strong> "Make a draft version for me to review" keeps you in charge and lowers the stakes of the first attempt.</li>
+  <li><span class="num">4</span><strong>Invite questions back.</strong> End with the single most useful sentence in this guide:</li>
+</ol>
+<div class="card tip">
+  <span class="prompt">Ask me any questions you have before you get started.</span>
+  <p class="small" style="margin:8px 0 0">It surfaces the ambiguity you didn't know was there, before an hour of work goes the wrong direction.</p>
+</div>
+
+<h3>Talk instead of type</h3>
+<p>Voice input on the phone apps is the lowest-friction way to prompt. Ramble; it sorts it out. Dictating a messy three-minute description usually beats a carefully typed sentence.</p>
+
+<h3>For big projects: let Chat write the prompt</h3>
+<p>Don't hand-write a long brief. Describe the project to Claude or ChatGPT in a few sentences, tell it to <em>ask you questions first</em>, then ask it to write the kickoff prompt for the agent (Claude Code, Cowork). Four sentences in, five pages out &mdash; and it will remember details you'd have forgotten. If you've already been working in a chat for weeks, ask that chat for a <em>handoff document with all key decisions</em> and give the file to the new session.</p>
+
+<h2>3. Trust, but verify &mdash; in 60 seconds</h2>
+<p>Accuracy was our #1 concern in the survey (83% of us). The right response isn't avoidance; it's a minute of checking.</p>
+<div class="card teal">
+  <ol>
+    <li><strong>Ask where it came from.</strong> "Show me the source for that number" &mdash; then open one yourself.</li>
+    <li><strong>Spot-check some figures</strong> against the raw file. A few checks calibrate the whole answer.</li>
+    <li><strong>Never cite an unopened reference.</strong> Fabricated citations look perfect.</li>
+    <li><strong>Get a second opinion:</strong> paste the draft into a fresh chat &mdash; "find what's wrong here."</li>
+    <li><strong>The signature test:</strong> if you wouldn't sign it, don't send it.</li>
+  </ol>
+</div>
+<p class="small">Corollary: a model that asked you good clarifying questions is not therefore correct.</p>
+
+<h2>4. Disclosure &mdash; where we stand</h2>
+<p>83% of us want AI use disclosed in manuscripts; 62% in figures and images; over half in clinical notes. Until the department publishes a formal norm, the working rule:</p>
+<ul>
+  <li><strong>Manuscripts, abstracts, grants:</strong> follow the journal's or sponsor's policy (most now follow ICMJE: disclose use in methods or acknowledgments; AI is never an author; you are responsible for every word and citation).</li>
+  <li><strong>Figures and images:</strong> disclose any AI generation or manipulation; never for data figures without stating exactly what was done.</li>
+  <li><strong>Clinical documentation:</strong> follow the institutional ambient-AI consent and attestation workflow; you sign the note, you own the note.</li>
+  <li><strong>Slides, letters, emails:</strong> no disclosure expected for editing and formatting help &mdash; use judgment when the content itself is AI-generated.</li>
+</ul>
+
+<h2>5. Getting unstuck</h2>
+<div class="card">
+  <ul>
+    <li><strong>Start with the <a href="prompts.html">prompt library</a></strong> &mdash; copy a prompt, swap in your details, go.</li>
+    <li><strong>Ask the AI itself.</strong> "I'm a urologist who has never used you before. What are three things you could take off my plate this week? Ask me questions first."</li>
+    <li><strong>Ask a colleague who presented at the retreat</strong> &mdash; Michael Uy, Kristian Stensland, Todd Morgan, Kristen Chrouser, Rod Dunn. Every one of us was a beginner recently.</li>
+    <li><strong>Give it thirty unhurried minutes once.</strong> The most common free-text request in our survey was "time and space to play around with it." Block it on a calendar; treat it as CME.</li>
+  </ul>
+</div>
+
+</main>
+<footer>Department of Urology faculty retreat &middot; September 2026 &middot; built from the faculty AI survey (n=29)</footer>
+</body>
+</html>
